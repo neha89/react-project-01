@@ -46,6 +46,7 @@
 import {useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
+import ExpensesFilter from "./components/Expenses/ExpensesFilter";
 
 const App = () => {
   const DUMMY_EXPENSES = [
@@ -80,6 +81,7 @@ const App = () => {
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
+      <ExpensesFilter items={expenses}/>
     </div>
   );
 };
